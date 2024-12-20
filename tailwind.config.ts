@@ -18,6 +18,11 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    fontFamily: {
+      serif: ['ui-serif', 'Georgia'],
+      poppins: ['Poppins', 'sans-serif'],
+      georgia: ['Georgia', 'serif'],
+    },
   },
   plugins: [
     addVariablesForColors,

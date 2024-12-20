@@ -1,0 +1,38 @@
+{
+  "projects": [
+    {
+      "title": "Cinema Review App",
+      "description": "A React-based app that allows users to explore detailed movie information, including ratings, cast, directors, and more. This app fetches movie data from the OMDb API and displays it in a clean, user-friendly interface. It supports movie search functionality and offers responsive design for optimal viewing across devices.",
+      "technologies": [
+        "React.js",
+        "Vite",
+        "Axios",
+        "Tailwind CSS",
+        "React Router",
+        "OMDb API"
+      ]
+    },
+    {
+      "title": "Git Issue Tracker",
+      "description": "A front-end application built using React, Tailwind CSS, DaisyUI, and Redux Toolkit, which allows users to create and comment on issues. It provides a simple way to track and manage issues within a project, featuring a responsive design and an issue list page to display and interact with issues.",
+      "technologies": [
+        "React.js",
+        "Tailwind CSS",
+        "DaisyUI",
+        "Redux Toolkit"
+      ]
+    },
+    {
+      "title": "Find Pokémon App",
+      "description": "A React.js web application that lets users search for Pokémon by name or ID and retrieve detailed information about them. The app uses the PokeAPI to fetch data and displays information like types, abilities, moves, height, weight, and experience.",
+      "technologies": [
+        "React.js",
+        "Vite",
+        "Axios",
+        "Tailwind CSS",
+        "React Router",
+        "PokeAPI"
+      ]
+    }
+  ]
+}
