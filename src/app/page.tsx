@@ -3,51 +3,60 @@ import Clock from "@/components/Clock";
 import { FloatingDockDemo } from "@/components/FloatingDockDemo";
 import Footer from "@/components/Footer";
 import Project from "@/components/Project";
+import { FlipWords } from "@/components/ui/flip-words";
 import { TracingBeam } from "@/components/ui/tracing-beam";
-// import Image from "next/image";
 
 export default function Home() {
+  // const words = [
+  //   "Crafting Web Experiences That Wow",
+  //   "Creating innovative web experiences with every line of code",
+  // ];
+  const words = [
+    "Innovative Code",
+    "Web Innovation",
+    "Impactful Design",
+    "Smart Coding",
+  ];
+
   return (
     <TracingBeam>
-
       <div className=" mx-auto pt-28 max-w-[680px]">
-        <Clock/>
+        <Clock />
         <div className="mx-auto">
           {/* Hero section */}
           <div className="p-16 bg-slate-400 w-8 rounded-full"></div>
           <div className="flex items-center gap-11 mt-6 my-auto">
             <div className="flex flex-col gap-4">
-                <div>
-                  <h1 className=" font-semibold">Hi, I'm Rahul Suthar</h1>
-                  <p>Front-End Developer | Crafting Web Experiences That Wow</p>
-
-                  <p className="text-3xl">
-                    <strong>
-                      Creating innovative web experiences with every line of
-                      code
-                    </strong>
-                  </p>
-                </div>
+              <div>
+                <h1 className="text-2xl font-medium">Hi, I'm Rahul Suthar</h1>
+                {/* <p>Front-End Developer | Crafting Web Experiences That Wow</p> */}
+                <p>
+                  Front-End Developer | <FlipWords words={words} />
+                </p>
+              </div>
+              {/* <p className="text-4xl font-extrabold">Creating innovative web experiences with every line of code</p> */}
               <p>
                 I&rsquo;m a passionate Front-End Web Developer. I build
                 beautiful, responsive websites with clean, efficient code. From
                 interactive user interfaces to pixel-perfect designs, I turn
                 ideas into powerful web solutions.
               </p>
+              <p className="text-6xl font-extrabold">Creating innovative web experiences with every line of code</p>
+
             </div>
           </div>
 
           {/* Project */}
-          <div className="flex flex-col gap-2">
-            <h3>Project</h3>
+          <div className="flex flex-col gap-2 mt-9">
+            <h3 className="text-xl font-medium">Projects</h3>
             <div className="h-[0.5px] bg-[#e0e0e088]"></div>
 
-            <Project/>
+            <Project />
           </div>
           {/* Experiance */}
 
-          <div className="flex flex-col gap-2 mt-10">
-            <h3>Experience</h3>
+          <div className="flex flex-col gap-2 mt-9">
+            <h3 className="text-xl font-medium">Experience</h3>
             <div className="h-[0.5px] bg-[#e0e0e088]"></div>
             <div>
               <h4>The Proven Club</h4>
