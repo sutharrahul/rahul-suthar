@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import {IconLocation} from "@tabler/icons-react"
 
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
@@ -17,6 +18,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      cursor: {
+        'fancy': '',
+      }
+
     },
     // fontFamily: {
     //   serif: ['ui-serif', 'Georgia'],
