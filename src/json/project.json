@@ -1,30 +1,45 @@
 {
+  "profile": {
+    "image": "https://avatars.githubusercontent.com/u/117563756?v=4",
+    "image_alt": "Rahul Suthar",
+    "title": "Hi, I'm Rahul Suthar",
+    "designtion": "Front-End Developer",
+    "headline": "Front-End Developer",
+    "role": [
+      "Innovative Code",
+      "Web Innovation",
+      "Impactful Design",
+      "Smart Coding"
+    ],
+    "summary": "I'm a passionate Front-End Web Developer. I build beautiful, responsive websites with clean, efficient code. From interactive user interfaces to pixel-perfect designs, I turn ideas into powerful web solutions."
+  },
   "projects": [
     {
+      "id": "1",
       "title": "Cinema Review App",
-      "description": "A React-based app that allows users to explore detailed movie information, including ratings, cast, directors, and more. This app fetches movie data from the OMDb API and displays it in a clean, user-friendly interface. It supports movie search functionality and offers responsive design for optimal viewing across devices.",
+      "link" : "https://cinema-review-seven.vercel.app",
+      "description": "A React app that lets users search and explore detailed movie info, including ratings, cast, and directors, using data from the OMDb API. It features a clean, responsive design for all devices.",
       "technologies": [
         "React.js",
         "Vite",
         "Axios",
         "Tailwind CSS",
         "React Router",
-        "OMDb API"
+        "OMDb API",null, ""
       ]
     },
     {
+      "id": "2",
       "title": "Git Issue Tracker",
-      "description": "A front-end application built using React, Tailwind CSS, DaisyUI, and Redux Toolkit, which allows users to create and comment on issues. It provides a simple way to track and manage issues within a project, featuring a responsive design and an issue list page to display and interact with issues.",
-      "technologies": [
-        "React.js",
-        "Tailwind CSS",
-        "DaisyUI",
-        "Redux Toolkit"
-      ]
+      "link" : "https://git-issue-tracker-58iy.vercel.app",
+      "description": "A web app using Tailwind CSS, DaisyUI, and Redux Toolkit to track, manage, and comment on issues, with a responsive, user-friendly interface",
+      "technologies": ["React.js", "Tailwind CSS", "DaisyUI", "Redux Toolkit"]
     },
     {
+      "id": "3",
       "title": "Find Pokémon App",
-      "description": "A React.js web application that lets users search for Pokémon by name or ID and retrieve detailed information about them. The app uses the PokeAPI to fetch data and displays information like types, abilities, moves, height, weight, and experience.",
+      "link" : "https://find-pokemon-omega.vercel.app/",
+      "description": "Dynamic React app that lets users search for Pokémon by name or ID, displaying details like types, abilities, moves, and stats using data from the PokeAPI.",
       "technologies": [
         "React.js",
         "Vite",
@@ -34,5 +49,20 @@
         "PokeAPI"
       ]
     }
-  ]
+  ],
+  "experience": [
+    {
+      "company": "TPC",
+      "role": "Front-end Developer",
+      "timeline": "06/2024 - Present",
+      "link": "theproven.club",
+      "description": "A React.js web application that lets users search for Pokémon by name or ID and retrieve detailed information about them. The app uses the PokeAPI to fetch data and displays information like types, abilities, moves, height, weight, and experience.",
+      "technologies": ["Next.js", "Axios", "Tailwind CSS"]
+    }
+  ],
+  "social": {
+    "email": "",
+    "footer-text": "",
+    "links": [{ "logo": "", "name": "", "link": "" }]
+  }
 }
