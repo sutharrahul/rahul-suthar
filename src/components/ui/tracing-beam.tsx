@@ -63,9 +63,9 @@ export const TracingBeam = ({
                 ? "none"
                 : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
           }}
-          className="ml-[27px] h-4 w-4 rounded-full border border-netural-200 shadow-sm flex items-center justify-center"
+          // className="ml-[30px] h-2 w-2 rounded-full border border-netural-200 shadow-sm flex items-center justify-center"
         >
-          <motion.div
+          {/* <motion.div
             transition={{
               duration: 0.2,
               delay: 0.5,
@@ -77,7 +77,7 @@ export const TracingBeam = ({
                 scrollYProgress.get() > 0 ? "white" : "var(--emerald-600)",
             }}
             className="h-2 w-2  rounded-full border border-neutral-300 bg-white"
-          />
+          /> */}
         </motion.div>
         <svg
           viewBox={`0 0 20 ${svgHeight}`}

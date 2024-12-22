@@ -51,7 +51,8 @@ export default function Home() {
                 <p>{projectData?.description}</p>
                 <div className="mt-4">
                   {projectData?.technologies?.map(
-                    (tech) => tech && <Badge key={tech} label={tech?.toLowerCase()} />
+                    (tech) =>
+                      tech && <Badge key={tech} label={tech?.toLowerCase()} />
                   )}
                 </div>
               </div>
@@ -65,18 +66,15 @@ export default function Home() {
             <div className="h-[0.5px] bg-[#e0e0e088]"></div>
 
             {/* <Experience expieriences={[]} /> */}
-            <div>
-              <h4>The Proven Club</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-                consequatur. Itaque laboriosam totam non, delectus minima sint,
-                accusantium consequuntur earum fugiat consequatur fuga vel quos
-                optio mollitia! Excepturi, sit autem! Lorem ipsum dolor sit amet
-                consectetur, adipisicing elit. Maiores quasi voluptates repellat
-                fugiat, quos ex deserunt sapiente iste? Voluptatum, minima amet
-                magni ab tempora adipisci sint alias quidem reprehenderit vero?
-                lorem300
-              </p>
+            <div className="flex flex-col gap-2">
+              <h4 className="text-xl font-semibold">
+                {experience?.company}{" "}
+                <span className="text-sm font-light">
+                  {experience?.timeline}
+                </span>
+              </h4>
+              <span> {experience?.role} </span>
+              <p>{experience?.description}</p>
             </div>
           </div>
         </div>

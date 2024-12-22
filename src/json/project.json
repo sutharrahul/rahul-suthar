@@ -17,7 +17,7 @@
     {
       "id": "1",
       "title": "Cinema Review App",
-      "link" : "https://cinema-review-seven.vercel.app",
+      "link": "https://cinema-review-seven.vercel.app",
       "description": "A React app that lets users search and explore detailed movie info, including ratings, cast, and directors, using data from the OMDb API. It features a clean, responsive design for all devices.",
       "technologies": [
         "React.js",
@@ -25,20 +25,22 @@
         "Axios",
         "Tailwind CSS",
         "React Router",
-        "OMDb API",null, ""
+        "OMDb API",
+        null,
+        ""
       ]
     },
     {
       "id": "2",
       "title": "Git Issue Tracker",
-      "link" : "https://git-issue-tracker-58iy.vercel.app",
+      "link": "https://git-issue-tracker-58iy.vercel.app",
       "description": "A web app using Tailwind CSS, DaisyUI, and Redux Toolkit to track, manage, and comment on issues, with a responsive, user-friendly interface",
       "technologies": ["React.js", "Tailwind CSS", "DaisyUI", "Redux Toolkit"]
     },
     {
       "id": "3",
       "title": "Find Pokémon App",
-      "link" : "https://find-pokemon-omega.vercel.app/",
+      "link": "https://find-pokemon-omega.vercel.app/",
       "description": "Dynamic React app that lets users search for Pokémon by name or ID, displaying details like types, abilities, moves, and stats using data from the PokeAPI.",
       "technologies": [
         "React.js",
@@ -50,16 +52,14 @@
       ]
     }
   ],
-  "experience": [
-    {
-      "company": "TPC",
-      "role": "Front-end Developer",
-      "timeline": "06/2024 - Present",
-      "link": "theproven.club",
-      "description": "A React.js web application that lets users search for Pokémon by name or ID and retrieve detailed information about them. The app uses the PokeAPI to fetch data and displays information like types, abilities, moves, height, weight, and experience.",
-      "technologies": ["Next.js", "Axios", "Tailwind CSS"]
-    }
-  ],
+  "experience": {
+    "company": "The Proven Club",
+    "role": "Front-end Developer",
+    "timeline": "06/2024 - Present",
+    "link": "theproven.club",
+    "description": "At The Proven Club, I play a key role in designing and developing the front-end of our cutting-edge AI-driven recruitment platform. The company leverages AI to conduct technical interviews, including coding rounds, enabling companies to assess candidates' skills quickly and accurately.",
+    "technologies": ["Next.js", "Axios", "Tailwind CSS"]
+  },
   "social": {
     "email": "",
     "footer-text": "",

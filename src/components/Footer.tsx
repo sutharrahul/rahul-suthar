@@ -55,7 +55,15 @@ export default function Footer() {
         ))}
       </div>
       <div className="h-[0.5px] bg-[#e0e0e088]"></div>
-      <span className="text-xs">Crafted by Rahul.</span>
+      <div className="flex justify-between mt-3">
+        <div className="text-sm text-">
+          Built with <Link href={""}>Next.js, </Link>
+          <Link href={""}>Tailwind, </Link>
+          <Link href={""}>Aceternity </Link> and
+          <Link href={""}> Vercel</Link>
+        </div>
+        <span className="text-xs">Crafted by Rahul.</span>
+      </div>
     </div>
   );
 }
