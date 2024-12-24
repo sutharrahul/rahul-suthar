@@ -34,7 +34,9 @@
       "title": "Git Issue Tracker",
       "link": "https://git-issue-tracker-58iy.vercel.app",
       "description": "A web app using Tailwind CSS, DaisyUI, and Redux Toolkit to track, manage, and comment on issues, with a responsive, user-friendly interface",
-      "technologies": ["React.js", "Tailwind CSS", "DaisyUI", "Redux Toolkit"]
+      "technologies": ["React.js", "Tailwind CSS", "DaisyUI", "Redux Toolkit",
+      null,
+      ""]
     },
     {
       "id": "3",
@@ -47,7 +49,9 @@
         "Axios",
         "Tailwind CSS",
         "React Router",
-        "PokeAPI"
+        "PokeAPI",
+        null,
+        ""
       ]
     }
   ],
