@@ -53,10 +53,10 @@
   ],
   "experience": {
     "company": "The Proven Club",
-    "role": "Front-end Developer",
+    "role": "Frontend Developer (freelancer)",
     "timeline": "06/2024 - Present",
     "link": "theproven.club",
-    "description": "At The Proven Club, I play a key role in designing and developing the front-end of our cutting-edge AI-driven recruitment platform. The company leverages AI to conduct technical interviews, including coding rounds, enabling companies to assess candidates' skills quickly and accurately.",
+    "description": "Contributing to the development of an AI-driven hiring challenge platform using React, Redux, Next.js, and Node.js. Built real-time coding environments with AI-powered live chat, instant code compilation, and feedback. Enhanced scalability with WebSockets and refined UI/UX for a seamless, cross-device experience.",
     "technologies": ["Next.js", "Axios", "Tailwind CSS"]
   },
   "social": {

@@ -28,7 +28,7 @@ export default function Home() {
                   <div>
                     {profile?.designtion} | <FlipWords words={profile?.role} />
                   </div>
-                  <div className="h-[0.5px] bg-[#e0e0e088]"></div>
+                  <div className="h-[0.5px] bg-[#e0e0e088] mt-2"></div>
                 </div>
                 <p>{profile?.summary}</p>
               </div>

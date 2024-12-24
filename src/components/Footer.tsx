@@ -6,6 +6,7 @@ import {
   IconBrandLinkedin,
   IconMail,
 } from "@tabler/icons-react";
+import { span } from "framer-motion/client";
 
 export default function Footer() {
   const links = [
@@ -80,26 +81,15 @@ export default function Footer() {
           Built with{" "}
           {build?.map(({ title, href }) => (
             <>
-              {title == "Vercel" ? (
-                <Link
-                  target="_blank"
-                  className="hover:text-[#0088f2] duration-150"
-                  key={title}
-                  href={href}
-                >
-                  Deployed on {" "}
-                  {title}
-                </Link>
-              ) : (
-                <Link
-                  target="_blank"
-                  className="hover:text-[#0088f2] duration-150"
-                  key={title}
-                  href={href}
-                >
-                  {title}
-                </Link>
-              )}
+              {title == "Vercel" && <span>{" and Deployed on "}</span>}
+              <Link
+                target="_blank"
+                className="hover:text-[#0088f2] duration-150"
+                key={title}
+                href={href}
+              >
+                {title}
+              </Link>
             </>
           ))}
         </div>
