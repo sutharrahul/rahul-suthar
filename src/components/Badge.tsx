@@ -4,7 +4,7 @@ type BadgeProps = {
 };
 export default function Badge({ label }: BadgeProps) {
   return (
-    <span className="py-px px-2 mr-2 rounded-[5px] bg-[#fff]/90 font-semibold backdrop-blur-sm font-mono text-xs text-[#252525]">
+    <span className="py-px px-2 rounded-[5px] bg-[#fff]/90 font-semibold backdrop-blur-sm font-mono text-xs text-[#252525]">
       {label}
     </span>
   );
