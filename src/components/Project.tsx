@@ -1,18 +1,19 @@
+import React from "react";
 import { IconArrowUpRight } from "@tabler/icons-react";
 import Link from "next/link";
-import React from "react";
 import Badge from "./Badge";
 
 type ProjectProp = {
   id: string;
-  title : string;
-  link : string;
-  description : string;
-  technologies: (string | null | undefined)[]};
+  title: string;
+  link: string;
+  description: string;
+  technologies: (string | null | undefined)[];
+};
 
-type Prop={
-  projects: ProjectProp[]
-}
+type Prop = {
+  projects: ProjectProp[];
+};
 export default function Project({ projects }: Prop) {
   return (
     <div className="flex flex-col gap-2 mt-9">
@@ -32,8 +33,7 @@ export default function Project({ projects }: Prop) {
           <p>{description}</p>
           <div className="mt-4 flex flex-wrap gap-1">
             {technologies?.map(
-              (tech) =>
-                tech && <Badge key={tech} label={tech?.toLowerCase()} />
+              (tech) => tech && <Badge key={tech} label={tech?.toLowerCase()} />
             )}
           </div>
         </div>

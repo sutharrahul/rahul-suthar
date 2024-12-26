@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
+import React, { ReactNode, useState } from "react";
 import { FlipWords } from "./ui/flip-words";
 import Image from "next/image";
+import Modal from "./Modal";
+import Resume from "./Resume";
 
 type Profile = {
   image: string;
@@ -15,10 +18,28 @@ type Prop = {
   profile: Profile;
 };
 export default function Profile({ profile }: Prop) {
+  const [modal, setModal] = useState<ReactNode>();
+
+  const handleModal = () => {
+   
+    setModal(
+      <Modal onClose={()=>setModal(null)} onClickOutsideClose>
+        <Resume/>
+      </Modal>
+    );
+  };
+
   return (
     <>
+    {modal}
       {" "}
-      <Image width={100} height={100} src={profile?.image} alt={profile?.image_alt} className="rounded-full"/>
+      <Image
+        width={100}
+        height={100}
+        src={profile?.image}
+        alt={profile?.image_alt}
+        className="rounded-full"
+      />
       <div className="flex items-center gap-11 mt-6 my-auto">
         <div className="flex flex-col gap-4">
           <div>
@@ -31,6 +52,12 @@ export default function Profile({ profile }: Prop) {
           <p>{profile?.summary}</p>
         </div>
       </div>
+      <button
+        className="mt-5 font-medium py-1 px-6 bg-[#f0f0f0] text-black rounded-md"
+        onClick={handleModal}
+      >
+        Hire me
+      </button>
     </>
   );
 }

@@ -30,7 +30,7 @@ export default function Clock() {
   }, []); 
 
   return (
-    <p className="fixed bottom-2 right-4 w-fit py-1 px-2 rounded-md bg-[#323232] text-white text-xs">
+    <p className="fixed bottom-2 right-4 w-fit py-1 px-2 rounded-md bg-[#323232] text-white text-xs z-50">
       {time}
     </p>
   );
