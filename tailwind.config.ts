@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import {IconLocation} from "@tabler/icons-react"
+import { IconLocation } from "@tabler/icons-react";
 
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
@@ -19,9 +19,15 @@ export default {
         foreground: "var(--foreground)",
       },
       cursor: {
-        'fancy': '',
-      }
-
+        fancy: "",
+      },
+    },
+    keyframes: {
+      shimmer: {
+        "100%": {
+          transform: "translateX(100%)",
+        },
+      },
     },
     // fontFamily: {
     //   serif: ['ui-serif', 'Georgia'],
@@ -30,9 +36,7 @@ export default {
     //   mono : ['']
     // },
   },
-  plugins: [
-    addVariablesForColors,
-  ],
+  plugins: [addVariablesForColors],
 } satisfies Config;
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
@@ -41,7 +45,7 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
