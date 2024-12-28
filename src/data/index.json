@@ -1,79 +1,79 @@
 {
-  "profile": {
-    "image": "https://avatars.githubusercontent.com/u/117563756?v=4",
-    "image_alt": "Rahul Suthar",
-    "title": "Hi, I'm Rahul Suthar",
-    "designtion": "Front-End Developer",
-    "role": [
-      "Innovative Code",
-      "Web Innovation",
-      "Impactful Design",
-      "Smart Coding"
+    "profile": {
+        "image": "https://avatars.githubusercontent.com/u/117563756?v=4",
+        "image_alt": "Rahul Suthar",
+        "title": "Hi, I'm Rahul Suthar",
+        "designtion": "Front-End Developer",
+        "role": [
+            "Innovative Code",
+            "Web Innovation",
+            "Impactful Design",
+            "Smart Coding"
+        ],
+        "summary": "I'm a passionate Front-End Web Developer. I build beautiful, responsive websites with clean, efficient code. From interactive user interfaces to pixel-perfect designs, I turn ideas into powerful web solutions."
+    },
+    "projects": [
+        {
+            "id": "1",
+            "title": "Cinema Review App",
+            "link": "https://cinema-review-seven.vercel.app",
+            "description": "A React app that lets users search and explore detailed movie info, including ratings, cast, and directors, using data from the OMDb API. It features a clean, responsive design for all devices.",
+            "technologies": [
+                "React.js",
+                "Vite",
+                "Axios",
+                "Tailwind CSS",
+                "React Router",
+                "OMDb API",
+                null,
+                ""
+            ]
+        },
+        {
+            "id": "2",
+            "title": "Git Issue Tracker",
+            "link": "https://git-issue-tracker-58iy.vercel.app",
+            "description": "A web app using Tailwind CSS, DaisyUI, and Redux Toolkit to track, manage, and comment on issues, with a responsive, user-friendly interface",
+            "technologies": [
+                "React.js",
+                "Tailwind CSS",
+                "DaisyUI",
+                "Redux Toolkit",
+                null,
+                ""
+            ]
+        },
+        {
+            "id": "3",
+            "title": "Find Pokémon App",
+            "link": "https://find-pokemon-omega.vercel.app/",
+            "description": "Dynamic React app that lets users search for Pokémon by name or ID, displaying details like types, abilities, moves, and stats using data from the PokeAPI.",
+            "technologies": [
+                "React.js",
+                "Vite",
+                "Axios",
+                "Tailwind CSS",
+                "React Router",
+                "PokeAPI",
+                null,
+                ""
+            ]
+        }
     ],
-    "summary": "I'm a passionate Front-End Web Developer. I build beautiful, responsive websites with clean, efficient code. From interactive user interfaces to pixel-perfect designs, I turn ideas into powerful web solutions."
-  },
-  "projects": [
-    {
-      "id": "1",
-      "title": "Cinema Review App",
-      "link": "https://cinema-review-seven.vercel.app",
-      "description": "A React app that lets users search and explore detailed movie info, including ratings, cast, and directors, using data from the OMDb API. It features a clean, responsive design for all devices.",
-      "technologies": [
-        "React.js",
-        "Vite",
-        "Axios",
-        "Tailwind CSS",
-        "React Router",
-        "OMDb API",
-        null,
-        ""
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Git Issue Tracker",
-      "link": "https://git-issue-tracker-58iy.vercel.app",
-      "description": "A web app using Tailwind CSS, DaisyUI, and Redux Toolkit to track, manage, and comment on issues, with a responsive, user-friendly interface",
-      "technologies": [
-        "React.js",
-        "Tailwind CSS",
-        "DaisyUI",
-        "Redux Toolkit",
-        null,
-        ""
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Find Pokémon App",
-      "link": "https://find-pokemon-omega.vercel.app/",
-      "description": "Dynamic React app that lets users search for Pokémon by name or ID, displaying details like types, abilities, moves, and stats using data from the PokeAPI.",
-      "technologies": [
-        "React.js",
-        "Vite",
-        "Axios",
-        "Tailwind CSS",
-        "React Router",
-        "PokeAPI",
-        null,
-        ""
-      ]
+    "experiences": [
+        {
+            "id": "1",
+            "company": "The Proven Club",
+            "role": "Frontend Developer (freelancer)",
+            "timeline": "06/2024 - Present",
+            "link": "theproven.club",
+            "description": "Contributing to the development of an AI-driven hiring challenge platform using React, Redux, Next.js, and Node.js. Built real-time coding environments with AI-powered live chat, instant code compilation, and feedback. Enhanced scalability with WebSockets and refined UI/UX for a seamless, cross-device experience.",
+            "technologies": ["Next.js", "Axios", "Tailwind CSS"]
+        }
+    ],
+    "social": {
+        "email": "",
+        "footer-text": "",
+        "links": [{ "logo": "", "name": "", "link": "" }]
     }
-  ],
-  "experiences": [
-    {
-      "id": "1",
-      "company": "The Proven Club",
-      "role": "Frontend Developer (freelancer)",
-      "timeline": "06/2024 - Present",
-      "link": "theproven.club",
-      "description": "Contributing to the development of an AI-driven hiring challenge platform using React, Redux, Next.js, and Node.js. Built real-time coding environments with AI-powered live chat, instant code compilation, and feedback. Enhanced scalability with WebSockets and refined UI/UX for a seamless, cross-device experience.",
-      "technologies": ["Next.js", "Axios", "Tailwind CSS"]
-    }
-  ],
-  "social": {
-    "email": "",
-    "footer-text": "",
-    "links": [{ "logo": "", "name": "", "link": "" }]
-  }
 }
