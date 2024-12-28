@@ -3,7 +3,7 @@ import { IconArrowUpRight } from "@tabler/icons-react";
 import Link from "next/link";
 import Badge from "./Badge";
 
-type ProjectProp = {
+type Project = {
   id: string;
   title: string;
   link: string;
@@ -12,8 +12,9 @@ type ProjectProp = {
 };
 
 type Prop = {
-  projects: ProjectProp[];
+  projects: Project[];
 };
+
 export default function Project({ projects }: Prop) {
   return (
     <div className="flex flex-col gap-2 mt-9">

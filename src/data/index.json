@@ -34,9 +34,14 @@
       "title": "Git Issue Tracker",
       "link": "https://git-issue-tracker-58iy.vercel.app",
       "description": "A web app using Tailwind CSS, DaisyUI, and Redux Toolkit to track, manage, and comment on issues, with a responsive, user-friendly interface",
-      "technologies": ["React.js", "Tailwind CSS", "DaisyUI", "Redux Toolkit",
-      null,
-      ""]
+      "technologies": [
+        "React.js",
+        "Tailwind CSS",
+        "DaisyUI",
+        "Redux Toolkit",
+        null,
+        ""
+      ]
     },
     {
       "id": "3",
@@ -55,14 +60,17 @@
       ]
     }
   ],
-  "experience": {
-    "company": "The Proven Club",
-    "role": "Frontend Developer (freelancer)",
-    "timeline": "06/2024 - Present",
-    "link": "theproven.club",
-    "description": "Contributing to the development of an AI-driven hiring challenge platform using React, Redux, Next.js, and Node.js. Built real-time coding environments with AI-powered live chat, instant code compilation, and feedback. Enhanced scalability with WebSockets and refined UI/UX for a seamless, cross-device experience.",
-    "technologies": ["Next.js", "Axios", "Tailwind CSS"]
-  },
+  "experiences": [
+    {
+      "id": "1",
+      "company": "The Proven Club",
+      "role": "Frontend Developer (freelancer)",
+      "timeline": "06/2024 - Present",
+      "link": "theproven.club",
+      "description": "Contributing to the development of an AI-driven hiring challenge platform using React, Redux, Next.js, and Node.js. Built real-time coding environments with AI-powered live chat, instant code compilation, and feedback. Enhanced scalability with WebSockets and refined UI/UX for a seamless, cross-device experience.",
+      "technologies": ["Next.js", "Axios", "Tailwind CSS"]
+    }
+  ],
   "social": {
     "email": "",
     "footer-text": "",
