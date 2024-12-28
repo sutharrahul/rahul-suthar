@@ -1,4 +1,4 @@
-import useResume from '@/useResume'
+import useResume from '@/app/hooks/useResume'
 import Image from 'next/image'
 import React from 'react'
 
