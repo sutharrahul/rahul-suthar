@@ -3,8 +3,7 @@ import { MouseEvent, useState } from 'react'
 function useResume() {
     const [isLoading, setIsLoading] = useState(true)
 
-    const imageUrl =
-        'https://drive.google.com/uc?export=view&id=12hoAsHOmpt9OeifCjefaozHCvPrpIaE8'
+    const imageUrl = process.env.RESUME_THUMBNAIL_URL || ''
 
     const onLoadingComplete = () => {
         setIsLoading(false)
@@ -12,9 +11,7 @@ function useResume() {
 
     const download = (e: MouseEvent<HTMLButtonElement>) => {
         e.stopPropagation()
-        window.open(
-            'https://drive.google.com/file/d/1MrGOz9wfxH4qaN02FRLts6oEM1Vi3Jzg/view',
-        )
+        window.open(process.env.RESUME_URL)
     }
 
     return { download, onLoadingComplete, isLoading, imageUrl }
