@@ -30,7 +30,7 @@ export default function Profile({ profile }: Prop) {
 
     return (
         <>
-            {modal}{' '}
+            {modal}
             <Image
                 width={100}
                 height={100}

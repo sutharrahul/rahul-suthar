@@ -26,6 +26,7 @@ export default function Project({ projects }: Prop) {
                     className="flex flex-col gap-2 p-4 border-[0.5px] border-[#e0e0e088] rounded-lg bg-[#111111] mt-3"
                 >
                     <Link
+                        target="_blank"
                         href={link}
                         className="text-xl font-semibold flex items-center gap-1"
                     >
