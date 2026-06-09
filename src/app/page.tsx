@@ -1,24 +1,27 @@
-import Clock from '@/components/Clock'
-import Footer from '@/components/Footer'
-import { TracingBeam } from '@/components/ui/tracing-beam'
-import data from '../data/index.json'
-import Profile from '@/components/Profile'
-import Experiance from '@/components/Experiance'
-import Project from '@/components/Project'
+import { Navbar } from '@/components/nav/Navbar'
+import { Hero } from '@/components/sections/Hero'
+import { About } from '@/components/sections/About'
+import { Skills } from '@/components/sections/Skills'
+import { Projects } from '@/components/sections/Projects'
+import { Experience } from '@/components/sections/Experience'
+import { GitHub } from '@/components/sections/GitHub'
+import { Testimonials } from '@/components/sections/Testimonials'
+import { Contact } from '@/components/sections/Contact'
+import { Footer } from '@/components/layout/Footer'
 
 export default function Home() {
-    const { profile, experiences, projects } = data
-    return (
-        <div className="mx-auto max-w-[580px]">
-            <TracingBeam className="px-5 sm:px-10 md:px-0">
-                <div className="px-4 pt-20 sm:pt-28">
-                    <Profile profile={profile} />
-                    <Experiance experiences={experiences} />
-                    <Project projects={projects} />
-                    <Footer />
-                </div>
-                <Clock />
-            </TracingBeam>
-        </div>
-    )
+  return (
+    <main className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <About />
+      {/* <Skills /> */}
+      <Projects />
+      <Experience />
+      <GitHub />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </main>
+  )
 }

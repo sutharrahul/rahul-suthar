@@ -1,24 +1,317 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --background: #ffffff;
-    --foreground: #171717;
+@layer base {
+  :root {
+    /* === Shadcn Base Tokens (Light) === */
+    --background: #FFFFFF;
+    --foreground: #14181D;
+    --card: #FFFFFF;
+    --card-foreground: #14181D;
+    --popover: #FFFFFF;
+    --popover-foreground: #14181D;
+    --primary: #14181D;
+    --primary-foreground: #FFFFFF;
+    --secondary: #EFEDEA;
+    --secondary-foreground: #14181D;
+    --muted: #EFEDEA;
+    --muted-foreground: rgba(20, 24, 29, 0.62);
+    --accent: #EFEDEA;
+    --accent-foreground: #14181D;
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: rgba(20, 24, 29, 0.12);
+    --input: rgba(20, 24, 29, 0.14);
+    --ring: #D97757;
+    --radius: 0.75rem;
+
+    /* === Custom Brand Tokens (Light) === */
+    --purple: #D97757;
+    --purple-light: #E6987E;
+    --purple-dark: #B8654A;
+    --purple-glow: rgba(217, 119, 87, 0.25);
+    --purple-subtle: rgba(217, 119, 87, 0.08);
+
+    --surface-0: #F5F5F5;
+    --surface-1: #FFFFFF;
+    --surface-2: #F0EEEB;
+    --surface-3: #E6E3DE;
+
+    --text-primary: #14181D;
+    --text-secondary: rgba(20, 24, 29, 0.62);
+    --text-tertiary: rgba(20, 24, 29, 0.42);
+
+    --gradient-hero: #F5F5F5;
+    --gradient-purple: #D97757;
+    --gradient-card: #FFFFFF;
+
+    /* Section background tokens */
+    --section-hero:         #F5F5F5;
+    --section-about:        #F5F5F5;
+    --section-skills:       #F5F5F5;
+    --section-projects:     #F5F5F5;
+    --section-experience:   #F5F5F5;
+    --section-github:       #F5F5F5;
+    --section-ai:           #F5F5F5;
+    --section-testimonials: #F5F5F5;
+    --section-contact:      #F5F5F5;
+
+    /* Chart colors */
+    --chart-1: #D97757;
+    --chart-2: #E6987E;
+    --chart-3: #B8654A;
+    --chart-4: #14181D;
+    --chart-5: #FFFFFF;
+
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+  }
+
+  .dark {
+    /* === Shadcn Dark Tokens === */
+    --background: #2C2C2C;
+    --foreground: #F5F5F5;
+    --card: #2C2C2C;
+    --card-foreground: #F5F5F5;
+    --popover: #2C2C2C;
+    --popover-foreground: #F5F5F5;
+    --primary: #F5F5F5;
+    --primary-foreground: #2C2C2C;
+    --secondary: #363636;
+    --secondary-foreground: #F5F5F5;
+    --muted: #363636;
+    --muted-foreground: rgba(245, 245, 245, 0.62);
+    --accent: #363636;
+    --accent-foreground: #F5F5F5;
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: rgba(245, 245, 245, 0.12);
+    --input: rgba(245, 245, 245, 0.14);
+    --ring: #D97757;
+
+    /* === Custom Brand Tokens (Dark) === */
+    --purple: #D97757;
+    --purple-light: #E6987E;
+    --purple-dark: #B8654A;
+    --purple-glow: rgba(217, 119, 87, 0.35);
+    --purple-subtle: rgba(217, 119, 87, 0.1);
+
+    --surface-0: #0F1419;
+    --surface-1: #2C2C2C;
+    --surface-2: #363636;
+    --surface-3: #404040;
+
+    --text-primary: #F5F5F5;
+    --text-secondary: rgba(245, 245, 245, 0.62);
+    --text-tertiary: rgba(245, 245, 245, 0.42);
+
+    --gradient-hero: #0F1419;
+    --gradient-purple: #D97757;
+    --gradient-card: #2C2C2C;
+
+    /* Section background tokens (dark) */
+    --section-hero:         #0F1419;
+    --section-about:        #0F1419;
+    --section-skills:       #0F1419;
+    --section-projects:     #0F1419;
+    --section-experience:   #0F1419;
+    --section-github:       #0F1419;
+    --section-ai:           #0F1419;
+    --section-testimonials: #0F1419;
+    --section-contact:      #0F1419;
+
+    --chart-1: #D97757;
+    --chart-2: #E6987E;
+    --chart-3: #B8654A;
+    --chart-4: #2C2C2C;
+    --chart-5: #F5F5F5;
+
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--purple-glow);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--purple);
+  }
+
+  /* Text selection */
+  ::selection {
+    background: var(--purple-glow);
+    color: var(--text-primary);
+  }
+
+  /* Focus visible */
+  :focus-visible {
+    outline: 2px solid var(--purple);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
-}
+@layer utilities {
+  /* Typography */
+  .font-inter { font-family: 'Inter', sans-serif; }
+  .font-mono-code { font-family: 'JetBrains Mono', monospace; }
 
-body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
+  /* Gradient text */
+  .gradient-text {
+    background: var(--gradient-purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glass surface */
+  .glass {
+    background: rgba(245, 245, 245, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(20, 24, 29, 0.08);
+  }
+  .dark .glass {
+    background: rgba(15, 20, 25, 0.85);
+    border: 1px solid rgba(245, 245, 245, 0.08);
+  }
+
+  /* Purple glow shadow */
+  .shadow-purple {
+    box-shadow: 0 0 40px var(--purple-glow), 0 4px 20px rgba(0,0,0,0.1);
+  }
+  .shadow-purple-sm {
+    box-shadow: 0 0 20px var(--purple-glow);
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+
+  /* === Section backgrounds === */
+  .section-hero         { background-color: var(--section-hero); }
+  .section-about        { background-color: var(--section-about); }
+  .section-skills       { background-color: var(--section-skills); }
+  .section-projects     { background-color: var(--section-projects); }
+  .section-experience   { background-color: var(--section-experience); }
+  .section-github       { background-color: var(--section-github); }
+  .section-ai           { background-color: var(--section-ai); }
+  .section-testimonials { background-color: var(--section-testimonials); }
+  .section-contact      { background-color: var(--section-contact); }
+
+  /* Card surface — always slightly elevated above its section bg */
+  .section-card {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  }
+  .dark .section-card {
+    background-color: #1c1c1f;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+  }
+
+  /* Top-border purple stripe for purple-tint sections (Experience, AI) */
+  .section-purple-stripe {
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(to right, transparent, var(--purple), transparent) 1;
+  }
+
+
+  /* Gradient fade divider: fades FROM the section's bg color INTO the next */
+  .section-fade-bottom {
+    position: relative;
+  }
+  .section-fade-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--section-next, transparent));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Thin accent rule — a subtle 1px line with a purple shimmer */
+  .section-rule {
+    position: relative;
+  }
+  .section-rule::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(480px, 80%);
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--purple-glow),
+      transparent
+    );
+    pointer-events: none;
+  }
+
+  /* Subtle grid background */
+  .bg-grid {
+    background-image: linear-gradient(rgba(124,58,237,0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(124,58,237,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .dark .bg-grid {
+    background-image: linear-gradient(rgba(139,92,246,0.06) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(139,92,246,0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 0;
+  }
 }
