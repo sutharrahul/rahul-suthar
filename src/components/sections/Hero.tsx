@@ -29,6 +29,7 @@ export function Hero() {
           <div className="lg:col-span-3 space-y-6">
             {/* Name */}
             <motion.div
+              className="flex items-center justify-between gap-4 lg:block"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -38,6 +39,17 @@ export function Hero() {
                 <br />
                 <span className="gradient-text">Suthar</span>
               </h1>
+
+              {/* Mobile avatar, shown to the right of the name */}
+              <div className="relative size-28 sm:size-24 shrink-0 rounded-full overflow-hidden border-4 border-[var(--purple)]/30 shadow-purple lg:hidden">
+                <Image
+                  src="/assets/avatar-nobg.png"
+                  alt={`${profile.name} avatar`}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </motion.div>
 
             {/* Role */}
@@ -112,8 +124,8 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right: Avatar (2 cols) */}
-          <div className="lg:col-span-2 flex justify-center lg:justify-end">
+          {/* Right: Avatar (2 cols), desktop only — mobile shows a compact avatar next to the name */}
+          <div className="hidden lg:col-span-2 lg:flex lg:justify-end">
             <motion.div
               className="relative"
               initial={{ opacity: 0, scale: 0.85 }}
