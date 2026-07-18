@@ -57,7 +57,7 @@ export const metadata: Metadata = {
       {
         url: ogImage,
         width: 1200,
-        height: 800,
+        height: 630,
         alt: 'Rahul Suthar — Full-Stack Developer',
         type: 'image/jpeg',
       },
