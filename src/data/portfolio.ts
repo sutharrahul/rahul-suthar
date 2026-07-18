@@ -100,62 +100,44 @@ export const projects = [
   {
     id: '1',
     featured: true,
-    title: 'AI Hiring Challenge Platform',
-    subtitle: 'Real-time AI-powered coding environment',
+    title: 'Binc',
+    subtitle: 'Social media management platform',
     description:
-      'A cutting-edge hiring platform built for The Proven Club featuring live code compilation, AI-powered chat assistance, real-time collaboration via WebSockets, and an intelligent evaluation engine. Handles thousands of concurrent users with sub-100ms response times.',
+      'An all-in-one social media management platform that lets teams plan, schedule, and publish content across multiple channels, with built-in analytics and a pricing calculator embedded across partner sites.',
     heroColor: 'bg-[var(--purple)]',
-    technologies: ['Next.js', 'React', 'Redux', 'Node.js', 'WebSockets', 'Tailwind CSS', 'OpenAI API'],
-    challenges: 'Achieving real-time code execution at scale while maintaining a seamless UX required careful WebSocket management and optimistic UI updates.',
-    results: 'Reduced candidate drop-off by 40%, achieved 99.8% uptime, and processed 10,000+ coding challenges in the first month.',
-    liveUrl: 'https://theproven.club',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'Node.js'],
+    challenges: 'Building a multi-platform scheduling and analytics engine that stays fast and reliable as connected accounts and content volume scale up.',
+    results: 'Powers content scheduling and analytics for multiple brands from a single, unified dashboard.',
+    liveUrl: 'https://binc-frontend.vercel.app',
     githubUrl: 'https://github.com/sutharrahul',
-    category: ['Next.js', 'React', 'AI'],
   },
   {
     id: '2',
     featured: false,
-    title: 'RAG Portfolio Assistant',
-    subtitle: 'Retrieval-augmented portfolio chatbot',
+    title: 'Personal AI Chatbot',
+    subtitle: 'RAG-powered assistant, right below on this page',
     description:
-      'An intelligent conversational AI assistant that answers questions about Rahul\'s work, skills, and projects. Built with LangChain, Pinecone vector database, and a custom FastAPI backend with semantic search.',
+      'A retrieval-augmented conversational assistant that answers questions about my background, skills, and projects in real time. Built with LangChain, a vector database for semantic search, and a FastAPI backend that streams responses token by token.',
     heroColor: 'bg-[var(--purple-dark)]',
-    technologies: ['React', 'FastAPI', 'LangChain', 'Pinecone', 'OpenAI', 'Python'],
-    challenges: 'Designing efficient chunking strategies and retrieval pipelines to ensure accurate, contextually-relevant responses.',
-    results: 'Achieves 94% answer relevance score with sub-2s response times using async retrieval.',
-    liveUrl: '#',
+    technologies: ['React', 'FastAPI', 'LangChain', 'Vector DB', 'OpenAI API', 'Python'],
+    challenges: 'Designing efficient chunking and retrieval pipelines so answers stay accurate and grounded while streaming with low latency.',
+    results: 'Answers portfolio questions instantly with streamed, source-grounded responses — try it in the Contact section below.',
+    liveUrl: '#contact',
     githubUrl: 'https://github.com/sutharrahul',
-    category: ['React', 'AI', 'Python'],
   },
   {
     id: '3',
     featured: false,
-    title: 'Cinema Review App',
-    subtitle: 'Movie discovery platform',
+    title: 'CodeStudio',
+    subtitle: 'Online IDE for writing, running & testing code',
     description:
-      'A full-featured movie discovery app powered by the OMDb API. Features include advanced search, ratings, cast & director info, and a clean responsive design with dark mode support.',
+      'A browser-based IDE that lets developers write, run, and test code in multiple languages without any local setup — complete with a code editor, isolated execution sandbox, and instant output.',
     heroColor: 'bg-surface-3',
-    technologies: ['React', 'Vite', 'Axios', 'Tailwind CSS', 'React Router', 'OMDb API'],
-    challenges: 'Implementing efficient API rate limiting and caching to prevent redundant requests and smooth the UX.',
-    results: 'Deployed on Vercel with Lighthouse score of 98/100 and 500+ monthly active users.',
-    liveUrl: 'https://cinema-review-seven.vercel.app',
+    technologies: ['React', 'Node.js', 'Monaco Editor', 'Docker', 'WebSockets'],
+    challenges: 'Running untrusted, user-submitted code safely and quickly using isolated, sandboxed execution environments.',
+    results: 'Provides a fast, dependency-free coding environment for writing and testing snippets directly in the browser.',
+    liveUrl: '#',
     githubUrl: 'https://github.com/sutharrahul',
-    category: ['React', 'Vite'],
-  },
-  {
-    id: '4',
-    featured: false,
-    title: 'Git Issue Tracker',
-    subtitle: 'Project management tool',
-    description:
-      'A comprehensive issue tracking system built with Redux Toolkit for state management. Features issue creation, commenting, status tracking, and responsive UI with DaisyUI components.',
-    heroColor: 'bg-surface-2',
-    technologies: ['React', 'Tailwind CSS', 'Redux Toolkit', 'React Router'],
-    challenges: 'Designing a normalized Redux store for efficient issue state management without performance regressions.',
-    results: 'Manages 100+ issues with zero state synchronization bugs and optimistic UI updates.',
-    liveUrl: 'https://git-issue-tracker-58iy.vercel.app',
-    githubUrl: 'https://github.com/sutharrahul',
-    category: ['React', 'Redux'],
   },
 ]
 
@@ -217,61 +199,6 @@ export const education = [
     courses: ['The Odin Project', 'Zero to Mastery', 'FastAI', 'CS50'],
   },
 ]
-
-export const testimonials = [
-  {
-    id: '1',
-    content:
-      'Rahul delivered outstanding work on our hiring platform. His attention to detail, technical depth, and ability to quickly integrate AI features exceeded our expectations. He is a rare engineer who combines strong UX intuition with solid backend knowledge.',
-    author: 'Arjun Sharma',
-    role: 'CTO',
-    company: 'The Proven Club',
-    avatar: 'AS',
-    avatarColor: 'bg-[var(--purple)]',
-  },
-  {
-    id: '2',
-    content:
-      'Working with Rahul was a pleasure. He took full ownership of the frontend codebase, introduced best practices, and shipped features at an impressive velocity without sacrificing code quality.',
-    author: 'Priya Mehta',
-    role: 'Product Manager',
-    company: 'The Proven Club',
-    avatar: 'PM',
-    avatarColor: 'bg-[var(--purple-dark)]',
-  },
-  {
-    id: '3',
-    content:
-      'Rahul built our company website in record time with a design that genuinely impressed our investors. He communicated clearly, met every deadline, and delivered polished code that was easy to maintain.',
-    author: 'Vikram Patel',
-    role: 'Founder',
-    company: 'TechStart India',
-    avatar: 'VP',
-    avatarColor: 'bg-surface-2',
-  },
-]
-
-export const githubStats = {
-  username: 'sutharrahul',
-  repos: 24,
-  stars: 48,
-  contributions: 847,
-  streak: 32,
-  languages: [
-    { name: 'TypeScript', percentage: 38, color: '#3178C6' },
-    { name: 'JavaScript', percentage: 28, color: '#F7DF1E' },
-    { name: 'Python', percentage: 18, color: '#3776AB' },
-    { name: 'CSS', percentage: 10, color: '#264de4' },
-    { name: 'Other', percentage: 6, color: '#D97757' },
-  ],
-  recentActivity: [
-    { repo: 'rahul-suthar', action: 'Pushed', message: 'feat: premium portfolio redesign', time: '2h ago' },
-    { repo: 'rag-app', action: 'Pushed', message: 'fix: improve retrieval pipeline accuracy', time: '1d ago' },
-    { repo: 'cinema-review', action: 'Pushed', message: 'perf: implement lazy image loading', time: '3d ago' },
-    { repo: 'git-issue-tracker', action: 'Pushed', message: 'feat: add bulk issue management', time: '1w ago' },
-    { repo: 'find-pokemon', action: 'Pushed', message: 'style: update type badge colors', time: '2w ago' },
-  ],
-}
 
 export const funFacts = [
   { emoji: '☕', label: 'Cups of coffee / day', value: '3–4' },

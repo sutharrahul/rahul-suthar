@@ -53,7 +53,7 @@ const config: Config = {
         charcoal: '#2C2C2C',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['var(--font-space-mono)', 'Space Mono', 'monospace'],
         mono: ['JetBrains Mono', 'Menlo', 'Monaco', 'monospace'],
       },
       borderRadius: {

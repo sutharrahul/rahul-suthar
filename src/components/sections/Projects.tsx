@@ -9,19 +9,11 @@ import { SectionLabel } from '@/components/shared/SectionLabel'
 import { projects } from '@/data/portfolio'
 import { cn } from '@/lib/utils'
 
-const allTechs = ['All', ...Array.from(new Set(projects.flatMap((p) => p.category)))]
-
 export function Projects() {
-  const [activeFilter, setActiveFilter] = useState('All')
   const [expandedProject, setExpandedProject] = useState<string | null>(null)
 
-  const filtered =
-    activeFilter === 'All'
-      ? projects
-      : projects.filter((p) => p.category.includes(activeFilter))
-
-  const featured = filtered.find((p) => p.featured) || filtered[0]
-  const rest = filtered.filter((p) => p.id !== featured?.id)
+  const featured = projects.find((p) => p.featured) || projects[0]
+  const rest = projects.filter((p) => p.id !== featured?.id)
 
   return (
     <AnimatedSection id="projects" className="section-padding section-projects section-rule">
@@ -32,33 +24,7 @@ export function Projects() {
           subheading="Production applications built with modern tooling, real users, and measurable impact."
         />
 
-        {/* Filter chips */}
-        <div className="mt-10 flex flex-wrap gap-2" role="group" aria-label="Filter by technology">
-          {allTechs.map((tech) => (
-            <button
-              key={tech}
-              onClick={() => setActiveFilter(tech)}
-              id={`project-filter-${tech.toLowerCase().replace(/\./g, '')}`}
-              className={cn(
-                'rounded-xl px-4 py-1.5 text-sm font-medium transition-all duration-200',
-                activeFilter === tech
-                  ? 'bg-[var(--purple)] text-white shadow-purple-sm'
-                  : 'border border-border bg-background text-muted-foreground hover:text-foreground hover:border-[var(--purple)]/30'
-              )}
-            >
-              {tech}
-            </button>
-          ))}
-        </div>
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeFilter}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-          >
+        <div>
             {/* Featured project */}
             {featured && (
               <motion.div
@@ -226,14 +192,7 @@ export function Projects() {
                 ))}
               </div>
             )}
-
-            {filtered.length === 0 && (
-              <div className="mt-16 text-center text-muted-foreground">
-                <p>No projects match this filter.</p>
-              </div>
-            )}
-          </motion.div>
-        </AnimatePresence>
+        </div>
       </div>
     </AnimatedSection>
   )

@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, JetBrains_Mono } from 'next/font/google'
+import { Space_Mono, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import { ThemeProvider } from '@/components/providers/ThemeProvider'
 
-const inter = Inter({
+const spaceMono = Space_Mono({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['400', '700'],
+  variable: '--font-space-mono',
   display: 'swap',
 })
 
@@ -68,9 +68,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
+    <html lang="en" className="dark">
+      <body className={`${spaceMono.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+        {children}
       </body>
     </html>
   )

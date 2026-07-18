@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { ThemeToggle } from '@/components/shared/ThemeToggle'
 import { profile } from '@/data/portfolio'
 
 const navLinks = [
@@ -96,7 +95,6 @@ export function Navbar() {
 
           {/* Right actions */}
           <div className="flex items-center gap-4">
-            <ThemeToggle />
             <a
               href={profile.resumeUrl}
               download
