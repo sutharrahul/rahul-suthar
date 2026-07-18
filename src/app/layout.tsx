@@ -21,9 +21,10 @@ const inter = Inter({
 // Applies the saved theme before first paint to avoid a flash. Default: light.
 const themeScript = `try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark')}}catch(e){}`
 
-const title = 'Rahul Suthar — Full Stack Developer'
+const title = 'Rahul Suthar — Full-Stack Developer'
 const description =
-  'Rahul Suthar — full-stack developer shipping production web apps with an AI-driven workflow, owning features end-to-end from database schema to API to UI.'
+  'Full-stack developer shipping production web apps with an AI-driven workflow — owning features end-to-end, from database schema to API to UI.'
+const ogImage = '/rahul-og.jpg'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -54,10 +55,11 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: '/assets/og-image.png',
+        url: ogImage,
         width: 1200,
-        height: 630,
-        alt: 'Rahul Suthar — Full Stack Developer',
+        height: 800,
+        alt: 'Rahul Suthar — Full-Stack Developer',
+        type: 'image/jpeg',
       },
     ],
   },
@@ -65,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title,
     description,
-    images: ['/assets/og-image.png'],
+    images: [ogImage],
   },
   icons: {
     icon: '/assets/logo.png',
