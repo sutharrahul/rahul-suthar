@@ -11,7 +11,7 @@ function useResume() {
 
     const download = (e: MouseEvent<HTMLButtonElement>) => {
         e.stopPropagation()
-        window.open(process.env.RESUME_URL)
+        window.open(process.env.RESUME_URL, '_blank', 'noopener,noreferrer')
     }
 
     return { download, onLoadingComplete, isLoading, imageUrl }

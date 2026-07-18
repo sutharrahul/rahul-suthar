@@ -91,9 +91,9 @@ export function Hero() {
                 <ArrowRight className="size-4" />
               </button> */}
               <a
-                href='/resume/Rahul_suthar.pdf'
-                // target="_blank"
-                download
+                href='/resume'
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-2xl bg-[var(--purple)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--purple-dark)] transition-all duration-200 hover:shadow-purple hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[var(--purple)]"
                 id="hero-resume-btn"
               >

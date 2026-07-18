@@ -95,14 +95,6 @@ export function Navbar() {
 
           {/* Right actions */}
           <div className="flex items-center gap-4">
-            <a
-              href={profile.resumeUrl}
-              download
-              className="hidden md:inline-flex items-center gap-1 text-sm font-medium text-foreground hover:text-[var(--purple)] transition-colors duration-200"
-            >
-              resume
-              <ArrowUpRight className="size-3.5" />
-            </a>
             {/* Mobile menu button */}
             <button
               className="flex md:hidden size-9 items-center justify-center text-foreground"
@@ -148,7 +140,8 @@ export function Navbar() {
               <div className="my-2 border-t border-border" />
               <a
                 href={profile.resumeUrl}
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center gap-1.5 px-2 py-2.5 text-base font-medium text-[var(--purple)]"
               >

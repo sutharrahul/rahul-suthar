@@ -11,7 +11,7 @@ export const profile = {
   avatar: 'https://avatars.githubusercontent.com/u/117563756?v=4',
   location: 'India',
   availability: 'Open to opportunities',
-  resumeUrl: '/resume.pdf',
+  resumeUrl: '/resume',
   email: 'rahulsuthar@example.com',
   github: 'https://github.com/sutharrahul',
   linkedin: 'https://linkedin.com/in/sutharrahul',
