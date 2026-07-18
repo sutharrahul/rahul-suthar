@@ -1,10 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { cn, smoothScrollTo } from '@/lib/utils'
 
 const navLinks = [
   { label: 'About', href: '#about' },
@@ -45,7 +44,7 @@ export function Navbar() {
 
   const handleNav = (href: string) => {
     setMobileOpen(false)
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+    smoothScrollTo(href)
   }
 
   return (
@@ -107,39 +106,33 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            className="fixed inset-0 z-40 md:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <div
-              className="absolute inset-0 bg-black/50"
-              onClick={() => setMobileOpen(false)}
-            />
-            <motion.div
-              className="absolute right-0 top-0 bottom-0 w-64 bg-background border-l border-border p-6 pt-20 flex flex-col gap-1"
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => handleNav(link.href)}
-                  className="text-left px-2 py-2.5 text-base lowercase text-foreground hover:text-[var(--purple)] transition-colors"
-                >
-                  {link.label}
-                </button>
-              ))}
-            </motion.div>
-          </motion.div>
+      {/* Mobile menu backdrop */}
+      <div
+        className={cn(
+          'fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 md:hidden',
+          mobileOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
         )}
-      </AnimatePresence>
+        onClick={() => setMobileOpen(false)}
+        aria-hidden="true"
+      />
+
+      {/* Mobile menu drawer */}
+      <div
+        className={cn(
+          'fixed right-0 top-0 bottom-0 z-40 flex w-64 flex-col gap-1 border-l border-border bg-background p-6 pt-20 transition-transform duration-300 ease-out md:hidden',
+          mobileOpen ? 'translate-x-0' : 'translate-x-full'
+        )}
+      >
+        {navLinks.map((link) => (
+          <button
+            key={link.href}
+            onClick={() => handleNav(link.href)}
+            className="text-left px-2 py-2.5 text-base lowercase text-foreground hover:text-[var(--purple)] transition-colors"
+          >
+            {link.label}
+          </button>
+        ))}
+      </div>
     </>
   )
 }

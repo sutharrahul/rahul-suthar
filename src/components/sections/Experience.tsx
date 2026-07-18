@@ -1,9 +1,7 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import { ExternalLink, MapPin, Calendar } from 'lucide-react'
 import { AnimatedSection } from '@/components/shared/AnimatedSection'
 import { SectionLabel } from '@/components/shared/SectionLabel'
+import { Card } from '@/components/shared/Card'
 import { experiences } from '@/data/portfolio'
 
 export function Experience() {
@@ -21,31 +19,17 @@ export function Experience() {
           <div className="absolute left-6 top-0 bottom-0 w-px bg-[var(--purple)]/25 hidden md:block" />
 
           <div className="space-y-10">
-            {experiences.map((exp, i) => (
-              <motion.div
-                key={exp.id}
-                className="relative md:pl-20"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
-              >
+            {experiences.map((exp) => (
+              <div key={exp.id} className="relative md:pl-20">
                 {/* Timeline dot */}
                 <div className="absolute left-0 top-6 hidden md:flex items-center justify-center">
-                  <motion.div
-                    className="size-12 rounded-2xl bg-[var(--purple)] flex items-center justify-center shadow-purple-sm text-white text-lg font-bold"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: 'spring', stiffness: 300 }}
-                  >
+                  <div className="size-12 rounded-2xl bg-[var(--purple)] flex items-center justify-center text-white text-lg font-bold">
                     {exp.company.charAt(0)}
-                  </motion.div>
+                  </div>
                 </div>
 
                 {/* Card */}
-                <motion.div
-                  className="rounded-3xl border border-border bg-background p-7 hover:border-[var(--purple)]/30 hover:shadow-card-hover transition-all duration-300"
-                  whileHover={{ y: -2 }}
-                >
+                <Card hover className="p-7">
                   {/* Header */}
                   <div className="flex flex-wrap items-start justify-between gap-4">
                     <div>
@@ -84,17 +68,10 @@ export function Experience() {
                   {/* Highlights */}
                   <ul className="mt-4 space-y-2">
                     {exp.highlights.map((h, j) => (
-                      <motion.li
-                        key={j}
-                        className="flex items-start gap-2 text-sm text-muted-foreground"
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 + j * 0.08 }}
-                      >
+                      <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
                         <span className="mt-0.5 size-1.5 rounded-full bg-[var(--purple)] shrink-0" />
                         {h}
-                      </motion.li>
+                      </li>
                     ))}
                   </ul>
 
@@ -109,8 +86,8 @@ export function Experience() {
                       </span>
                     ))}
                   </div>
-                </motion.div>
-              </motion.div>
+                </Card>
+              </div>
             ))}
           </div>
         </div>

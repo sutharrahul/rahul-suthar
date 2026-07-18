@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { ExternalLink, Layers, ChevronRight } from 'lucide-react'
 import { GithubIcon } from '@/components/shared/SocialIcons'
 import { AnimatedSection } from '@/components/shared/AnimatedSection'
@@ -27,13 +26,7 @@ export function Projects() {
         <div>
             {/* Featured project */}
             {featured && (
-              <motion.div
-                className="mt-10 rounded-3xl border border-border bg-background overflow-hidden hover:border-[var(--purple)]/30 transition-all duration-300 hover:shadow-card-hover"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                whileHover={{ y: -2 }}
-              >
+              <div className="mt-10 rounded-3xl border border-border bg-background overflow-hidden transition-all duration-200 hover:border-[var(--purple)]/30 hover:shadow-card-hover hover:-translate-y-0.5">
                 <div className="grid lg:grid-cols-2">
                   {/* Hero panel */}
                   <div
@@ -83,26 +76,23 @@ export function Projects() {
                         />
                         {expandedProject === featured.id ? 'Hide' : 'Show'} details
                       </button>
-                      <AnimatePresence>
-                        {expandedProject === featured.id && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className="overflow-hidden space-y-3"
-                          >
-                            <div className="rounded-xl bg-surface-1 p-3">
-                              <p className="text-xs font-semibold text-foreground mb-1">Challenge</p>
-                              <p className="text-xs text-muted-foreground">{featured.challenges}</p>
-                            </div>
-                            <div className="rounded-xl bg-emerald-500/8 border border-emerald-500/15 p-3">
-                              <p className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-1">Results</p>
-                              <p className="text-xs text-muted-foreground">{featured.results}</p>
-                            </div>
-                          </motion.div>
+                      <div
+                        className={cn(
+                          'grid transition-all duration-300 ease-out',
+                          expandedProject === featured.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                         )}
-                      </AnimatePresence>
+                      >
+                        <div className="overflow-hidden space-y-3">
+                          <div className="rounded-xl bg-surface-1 p-3">
+                            <p className="text-xs font-semibold text-foreground mb-1">Challenge</p>
+                            <p className="text-xs text-muted-foreground">{featured.challenges}</p>
+                          </div>
+                          <div className="rounded-xl bg-emerald-500/8 border border-emerald-500/15 p-3">
+                            <p className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-1">Results</p>
+                            <p className="text-xs text-muted-foreground">{featured.results}</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     {/* Links */}
@@ -127,20 +117,16 @@ export function Projects() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Rest of projects grid */}
             {rest.length > 0 && (
               <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {rest.map((project, i) => (
-                  <motion.div
+                {rest.map((project) => (
+                  <div
                     key={project.id}
-                    className="group rounded-2xl border border-border bg-background overflow-hidden hover:border-[var(--purple)]/30 hover:shadow-card-hover transition-all duration-300"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 + i * 0.1 }}
-                    whileHover={{ y: -3 }}
+                    className="group rounded-2xl border border-border bg-background overflow-hidden transition-all duration-200 hover:border-[var(--purple)]/30 hover:shadow-card-hover hover:-translate-y-0.5"
                   >
                     {/* Color hero */}
                     <div className={cn('h-32 relative flex items-end p-4', project.heroColor)}>
@@ -188,7 +174,7 @@ export function Projects() {
                         </a>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             )}

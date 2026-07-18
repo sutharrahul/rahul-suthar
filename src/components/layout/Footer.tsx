@@ -1,10 +1,11 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Mail, Heart } from 'lucide-react'
 import { GithubIcon, LinkedInIcon, XIcon } from '@/components/shared/SocialIcons'
+import { SocialIconButton } from '@/components/shared/SocialIconButton'
 import { profile } from '@/data/portfolio'
+import { smoothScrollTo } from '@/lib/utils'
 
 const navLinks = [
   { label: 'About', href: '#about' },
@@ -47,7 +48,7 @@ export function Footer() {
                 className="text-sm text-muted-foreground hover:text-[var(--purple)] transition-colors"
                 onClick={(e) => {
                   e.preventDefault()
-                  document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' })
+                  smoothScrollTo(link.href)
                 }}
               >
                 {link.label}
@@ -57,17 +58,8 @@ export function Footer() {
 
           {/* Socials */}
           <div className="flex justify-start sm:justify-end gap-2">
-            {socialLinks.map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target={href.startsWith('http') ? '_blank' : undefined}
-                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                aria-label={label}
-                className="size-9 rounded-xl border border-border flex items-center justify-center text-muted-foreground hover:text-[var(--purple)] hover:border-[var(--purple)]/30 hover:bg-[var(--purple)]/8 transition-all duration-200"
-              >
-                <Icon className="size-4" />
-              </a>
+            {socialLinks.map(({ icon, href, label }) => (
+              <SocialIconButton key={label} icon={icon} href={href} label={label} size="sm" />
             ))}
           </div>
         </div>
@@ -75,16 +67,11 @@ export function Footer() {
         {/* Divider + copyright */}
         <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <p>© {currentYear} Rahul Suthar. All rights reserved.</p>
-          <motion.p
-            className="flex items-center gap-1"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
+          <p className="flex items-center gap-1">
             Built with{' '}
             <Heart className="size-3 text-[var(--purple)] fill-current" aria-label="love" />{' '}
-            using Next.js, Tailwind & Framer Motion
-          </motion.p>
+            using Next.js & Tailwind CSS
+          </p>
         </div>
       </div>
     </footer>

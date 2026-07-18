@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Space_Mono, JetBrains_Mono } from 'next/font/google'
+import { Space_Mono, JetBrains_Mono, Inter } from 'next/font/google'
 import './globals.css'
 
 const spaceMono = Space_Mono({
@@ -14,6 +14,16 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-mono',
   display: 'swap',
 })
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+// Applies the saved theme before first paint to avoid a flash. Default: light.
+const themeScript = `try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark')}}catch(e){}`
 
 export const metadata: Metadata = {
   title: {
@@ -68,8 +78,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${spaceMono.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className={`${spaceMono.variable} ${jetbrainsMono.variable} ${inter.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

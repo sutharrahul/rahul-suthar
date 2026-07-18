@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef, useState, type FormEvent } from 'react'
-import { motion } from 'framer-motion'
 import { Bot, Send, User } from 'lucide-react'
 import { streamQuery, ApiError, MAX_QUESTION_LENGTH } from '@/lib/api'
 import type { ChatMessage } from '@/lib/types'
@@ -69,13 +68,7 @@ export function ChatWidget() {
   }
 
   return (
-    <motion.div
-      className="flex h-[520px] flex-col overflow-hidden rounded-3xl border border-border bg-background"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: 0.1 }}
-    >
+    <div className="flex h-[520px] flex-col overflow-hidden rounded-3xl border border-border bg-background">
       <div className="flex items-center gap-3 border-b border-border p-4">
         <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-[var(--purple)]">
           <Bot className="size-4 text-white" />
@@ -155,6 +148,6 @@ export function ChatWidget() {
           <Send className="size-4" />
         </button>
       </form>
-    </motion.div>
+    </div>
   )
 }
