@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next'
-import { Space_Mono, JetBrains_Mono, Inter } from 'next/font/google'
+import { Space_Mono, Inter } from 'next/font/google'
+import { SITE_URL } from '@/lib/site'
+import { profile } from '@/data/portfolio'
 import './globals.css'
 
 const spaceMono = Space_Mono({
@@ -9,15 +11,9 @@ const spaceMono = Space_Mono({
   display: 'swap',
 })
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  display: 'swap',
-})
-
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '700'],
   variable: '--font-sans',
   display: 'swap',
 })
@@ -25,39 +21,55 @@ const inter = Inter({
 // Applies the saved theme before first paint to avoid a flash. Default: light.
 const themeScript = `try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark')}}catch(e){}`
 
+const title = 'Rahul Suthar — Full Stack Developer'
+const description =
+  'Rahul Suthar — full-stack developer shipping production web apps with an AI-driven workflow, owning features end-to-end from database schema to API to UI.'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Rahul Suthar — Full Stack Developer & AI Engineer',
+    default: title,
     template: '%s | Rahul Suthar',
   },
-  description:
-    'Rahul Suthar is a Full Stack Developer specializing in AI-powered web applications, React, Next.js, and modern engineering. Available for freelance and full-time opportunities.',
+  description,
   keywords: [
     'Rahul Suthar',
     'Full Stack Developer',
-    'AI Developer',
     'React Developer',
     'Next.js',
     'TypeScript',
-    'LangChain',
+    'AI Engineer',
     'Frontend Engineer',
     'India',
   ],
-  authors: [{ name: 'Rahul Suthar', url: 'https://github.com/sutharrahul' }],
+  authors: [{ name: 'Rahul Suthar', url: profile.github }],
   creator: 'Rahul Suthar',
+  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    title: 'Rahul Suthar — Full Stack Developer & AI Engineer',
-    description:
-      'Building intelligent web experiences at the intersection of AI and modern engineering.',
-    siteName: 'Rahul Suthar Portfolio',
+    url: SITE_URL,
+    siteName: 'Rahul Suthar',
+    title,
+    description,
+    images: [
+      {
+        url: '/assets/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Rahul Suthar — Full Stack Developer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rahul Suthar — Full Stack Developer & AI Engineer',
-    description: 'Building intelligent web experiences at the intersection of AI and modern engineering.',
-    creator: '@sutharrahul',
+    title,
+    description,
+    images: ['/assets/og-image.png'],
+  },
+  icons: {
+    icon: '/assets/logo.png',
+    apple: '/assets/logo.png',
   },
   robots: {
     index: true,
@@ -67,9 +79,19 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#0F1419' },
-    { media: '(prefers-color-scheme: dark)', color: '#0F1419' },
+    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
+    { media: '(prefers-color-scheme: dark)', color: '#141414' },
   ],
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Rahul Suthar',
+  url: SITE_URL,
+  jobTitle: 'Full Stack Developer',
+  address: { '@type': 'PostalAddress', addressCountry: 'India' },
+  sameAs: [profile.github, profile.linkedin],
 }
 
 export default function RootLayout({
@@ -81,8 +103,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
-      <body className={`${spaceMono.variable} ${jetbrainsMono.variable} ${inter.variable} font-sans antialiased`}>
+      <body className={`${spaceMono.variable} ${inter.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
