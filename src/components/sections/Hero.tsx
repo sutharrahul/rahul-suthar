@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useReducedMotion } from 'framer-motion'
-import { Mail, ChevronDown, Download, ArrowRight } from 'lucide-react'
+import { Mail, ChevronDown, ArrowRight } from 'lucide-react'
 import { GithubIcon, LinkedInIcon, XIcon } from '@/components/shared/SocialIcons'
 import Image from 'next/image'
 import { profile } from '@/data/portfolio'
@@ -90,16 +90,6 @@ export function Hero() {
                 Get in touch
                 <ArrowRight className="size-4" />
               </button> */}
-              <a
-                href='/resume'
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-2xl bg-[var(--purple)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--purple-dark)] transition-all duration-200 hover:shadow-purple hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[var(--purple)]"
-                id="hero-resume-btn"
-              >
-                <Download className="size-4" />
-                Download Resume
-              </a>
             </motion.div>
 
             {/* Social links */}
